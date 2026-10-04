@@ -3,7 +3,7 @@ import json
 import argparse
 from collections import defaultdict
 
-def analyze(path):
+def analyze(path: str) -> dict | None:
     level_counter = defaultdict(int)
     service_counter = defaultdict(int)
     skipped = 0
