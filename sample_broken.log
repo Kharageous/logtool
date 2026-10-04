@@ -1,0 +1,5 @@
+{"ts": "2024-01-01T10:00:00", "level": "INFO",  "service": "trainer",    "msg": "epoch 1 started"}
+this is not valid json
+{"ts": "2024-01-01T10:00:10", "level": "INFO",  "service": "trainer",    "msg": "epoch 1 done"}
+{"ts": "2024-01-01T10:01:00", "msg": "missing level and service fields"}
+{"ts": "2024-01-01T10:02:00", "level": "ERROR", "service": "trainer",    "msg": "cuda oom rank=1"}

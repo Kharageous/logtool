@@ -1,0 +1,7 @@
+{"ts": "2024-01-01T10:00:00", "level": "INFO",  "service": "trainer",    "msg": "epoch 1 started"}
+{"ts": "2024-01-01T10:00:05", "level": "ERROR", "service": "trainer",    "msg": "cuda oom rank=3"}
+{"ts": "2024-01-01T10:00:10", "level": "INFO",  "service": "trainer",    "msg": "epoch 1 done"}
+{"ts": "2024-01-01T10:01:00", "level": "WARN",  "service": "dataloader", "msg": "slow batch"}
+{"ts": "2024-01-01T10:02:00", "level": "ERROR", "service": "trainer",    "msg": "cuda oom rank=1"}
+{"ts": "2024-01-01T10:03:00", "level": "INFO",  "service": "dataloader", "msg": "batch 100 loaded"}
+{"ts": "2024-01-01T10:04:00", "level": "ERROR", "service": "checkpoint", "msg": "s3 upload failed"}
