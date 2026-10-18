@@ -1,3 +1,4 @@
+# logtool.py — analyzing JSON-per-line logs
 import sys
 import json
 import argparse
