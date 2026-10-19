@@ -37,9 +37,16 @@ def analyze(path: str) -> dict | None:
              "reasons": dict(skipped_reasons),
          }
 
-def print_report(result, show_reasons):
-    print(f"Levels:   {result['levels']}")
-    print(f"Services: {result['services']}")
+def print_report(result, show_reasons, top_n=None):
+    levels = result["levels"]
+    services = result["services"]
+
+    if top_n is not None:
+        levels = dict(sorted(levels.items(), key=lambda x: -x[1])[:top_n])
+        services = dict(sorted(services.items(), key=lambda x: -x[1])[:top_n])
+
+    print(f"Levels:   {levels}")
+    print(f"Services: {services}")
     print(f"Skipped:  {result['skipped']}")
     if show_reasons:
         print("Reasons:")
@@ -54,14 +61,21 @@ def main():
                         help="Show why lines were skipped")
     parser.add_argument("--json", action="store_true",
                         help="Output raw JSON instead of formatted text")
+    parser.add_argument(
+            "--top",
+            type=int,
+            default=None,
+            help="Show only the top N entries (levels and services)",
+        )
     args = parser.parse_args()
+    
 
     result = analyze(args.path)
     if result:
         if args.json:
             print(json.dumps(result, indent=2))
         else:
-            print_report(result, args.show_reasons)
+            print_report(result, args.show_reasons, args.top)
 
 if __name__ == "__main__":
     main()
