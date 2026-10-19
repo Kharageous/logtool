@@ -1,5 +1,3 @@
-
-```markdown
 # logtool
 
 ![Tests](https://github.com/Kharageous/logtool/actions/workflows/tests.yml/badge.svg)
