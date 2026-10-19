@@ -1,3 +1,4 @@
+# Version B — edited on the edit-line-too branch
 # logtool.py — analyzing JSON-per-line logs
 import sys
 import json
