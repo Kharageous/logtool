@@ -1,4 +1,5 @@
-# logtool.py — analyzing JSON-per-line logs
+# Version A — edited on the edit-line branch
+# # logtool.py — analyzing JSON-per-line logs
 import sys
 import json
 import argparse
